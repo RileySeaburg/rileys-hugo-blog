@@ -2,8 +2,19 @@
 
 <h1>Hugo with Webpack, Sass, and PostCSS</h1>
 
-<h3>Hooray 🎉 - you've built this with <a href="https://github.com/netlify/victor-hugo">Victor-Hugo</a>!</h3>
+<h3>
+  Hooray 🎉 - you've built this with
+  <a href="https://github.com/netlify/victor-hugo">Victor-Hugo</a>!
+</h3>
 
-<a href="{{ "/tech" | relURL }}">Check out the tech</a>
+<ul>
+  {{ range (where .Pages "Section" "blog") }}
+  <li>
+    <a href="{{ .Permalink }}">
+      {{ .Title }}
+    </a>
+  </li>
+  {{ end }}
+</ul>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {{ end }}
