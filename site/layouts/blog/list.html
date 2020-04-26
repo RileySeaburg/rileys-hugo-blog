@@ -1,0 +1,11 @@
+{{ define "main" }}
+<ul>
+  {{ range (where .Pages "Section" "blog") }}
+  <li>
+    <a href="{{ .Permalink }}">
+      {{ .Title }}
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

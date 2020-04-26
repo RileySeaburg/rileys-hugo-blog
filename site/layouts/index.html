@@ -8,7 +8,7 @@
 </h3>
 
 <ul>
-  {{ range (where .Pages "Section" "blog") }}
+  {{ range .Pages }}
   <li>
     <a href="{{ .Permalink }}">
       {{ .Title }}
