@@ -3,7 +3,7 @@ backend:
   branch: v0.0.1 # Branch to update (optional; defaults to master)
   editor:
     preview: true
-media_folder: "site/static/img" # Folder where user uploaded files should go
+media_folder: site/static/img # Folder where user uploaded files should go
 public_folder: "img"
 collections: # A list of collections the CMS should be able to edit
   - name: "blog" # Used in routes, ie.: /admin/collections/:slug/edit
